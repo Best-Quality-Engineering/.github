@@ -1,0 +1,8 @@
+{
+  "name": "Maven Install Snapshot",
+  "description": "Executes the install goal using Maven CI friendly properties.",
+  "categories": [
+    "Maven POM",
+    "Java"
+  ]
+}

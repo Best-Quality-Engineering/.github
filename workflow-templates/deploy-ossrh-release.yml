@@ -1,0 +1,18 @@
+name: Deploy OSSRH Release
+on:
+  release:
+    types: [ released ]
+jobs:
+  deploy-ossrh-release:
+    uses: Best-Quality-Engineering/ci-maven-workflows/.github/workflows/deploy-release.yml@main
+    secrets:
+      code-signing-private-key: ${{secrets.CODE_SIGNING_KEY}}
+      code-signing-private-key-passphrase: ${{secrets.CODE_SIGNING_KEY_PASSPHRASE}}
+      code-signing-private-key-fingerprint: ${{secrets.CODE_SIGNING_KEY_FINGERPRINT}}
+      deployment-server-username: ${{secrets.OSSRH_USERNAME}}
+      deployment-server-password: ${{secrets.OSSRH_PASSWORD}}
+    with:
+      profiles: ossrh
+      deployment-server-id: ossrh
+      version: ${{github.ref_name}}
+      base-branch: $default-branch

@@ -1,0 +1,8 @@
+{
+  "name": "Deploy OSSRH Snapshot Artifacts",
+  "description": "Executes the deploy goal using Maven CI friendly properties, with support for signing and deploying snapshot artifacts to the OSSRH artifact repository.",
+  "categories": [
+    "Maven POM",
+    "Java"
+  ]
+}
