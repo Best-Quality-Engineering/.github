@@ -7,8 +7,8 @@ jobs:
     uses: Best-Quality-Engineering/ci-maven-workflows/.github/workflows/deploy-release.yml@main
     secrets:
       code-signing-private-key: ${{secrets.CODE_SIGNING_KEY}}
-      code-signing-private-key-passphrase: ${{secrets.CODE_SIGNING_KEY_PASSPHRASE}}
       code-signing-private-key-fingerprint: ${{secrets.CODE_SIGNING_KEY_FINGERPRINT}}
+      code-signing-private-key-passphrase: ${{secrets.CODE_SIGNING_KEY_PASSPHRASE}}
       deployment-server-username: ${{secrets.OSSRH_USERNAME}}
       deployment-server-password: ${{secrets.OSSRH_PASSWORD}}
     with:
