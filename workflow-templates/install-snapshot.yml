@@ -12,4 +12,5 @@ on:
 jobs:
   install-snapshot:
     uses: Best-Quality-Engineering/ci-maven-workflows/.github/workflows/install-snapshot.yml@v1
-
+    with:
+      upload-coverage: true

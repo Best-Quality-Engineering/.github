@@ -15,5 +15,5 @@ jobs:
     with:
       profiles: ossrh
       deployment-server-id: ossrh
-
+      upload-coverage: true
 
